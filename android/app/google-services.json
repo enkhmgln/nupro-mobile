@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1012043894026",
+    "project_id": "nupro-63fb3",
+    "storage_bucket": "nupro-63fb3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012043894026:android:1a7ccb38039c81b3f0fef3",
+        "android_client_info": {
+          "package_name": "com.example.sus_pro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGj0NbZsH7BGcnaZlbp9zNEd0_o-fSB10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,124 @@
+name: nuPro
+description: "A new Flutter project."
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  badges:
+  cached_network_image:
+  collection:
+  cupertino_icons: 
+  currency_text_input_formatter:
+  device_info_plus:
+  dio:
+  firebase_core: 
+  firebase_messaging:
+  flutter:
+    sdk: flutter
+  fluttertoast:
+  flutter_svg:
+  flutter_widget_from_html:
+  get:
+  get_storage:
+  geolocator: ^10.1.0
+  app_settings: ^5.1.1
+  google_maps_flutter: 
+  g_json:
+  intl:
+  image_picker:
+  local_auth:
+  money_formatter:
+  nested_scroll_view_plus:
+  package_info_plus:
+  path_provider:
+  pull_to_refresh:
+  smooth_page_indicator:
+  table_calendar:
+  two_dimensional_scrollables:
+  url_launcher:
+  webview_flutter:
+  widget_to_marker:
+  signature:
+  youtube_player_iframe:
+  youtube_player_flutter:
+  dropdown_button2: ^2.3.9
+  flutter_local_notifications: ^19.4.0
+  flutter_callkit_incoming: ^2.5.8
+  http_parser: ^4.1.2
+  uuid: ^4.5.1
+  file_picker: ^10.3.2
+  maps_launcher: ^3.0.0+1
+  firebase_analytics: ^12.0.1
+  permission_handler: ^12.0.1
+  flutter_animate: ^4.5.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons:
+  flutter_native_splash:
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_logo.png"
+  remove_alpha_ios: true
+
+
+# flutter_native_splash:
+#   ios: false
+#   color: "#504CFE"
+#   image: assets/images/android.splash.png
+#   android_12:
+#     color: "#504CFE"
+#     image: assets/images/android.splash.12.png
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/icons/
+    - assets/images/
+
+  fonts:
+    - family: Gilroy-Black
+      fonts:
+        - asset: assets/fonts/GIP-Black.otf
+
+    - family: Gilroy-ExtraBold
+      fonts:
+        - asset: assets/fonts/GIP-ExtraBold.otf
+
+    - family: Gilroy-Bold
+      fonts:
+        - asset: assets/fonts/GIP-Bold.otf
+
+    - family: Gilroy-SemiBold
+      fonts:
+        - asset: assets/fonts/GIP-SemiBold.otf
+
+    - family: Gilroy-Medium
+      fonts:
+        - asset: assets/fonts/GIP-Medium.otf
+
+    - family: Gilroy-Regular
+      fonts:
+        - asset: assets/fonts/GIP-Regular.otf
+
+    - family: Gilroy-Light
+      fonts:
+        - asset: assets/fonts/GIP-Light.otf
+
+    - family: Gilroy-UltraLight
+      fonts:
+        - asset: assets/fonts/GIP-UltraLight.otf
+
+    - family: Gilroy-Thin
+      fonts:
+        - asset: assets/fonts/GIP-Thin.otf

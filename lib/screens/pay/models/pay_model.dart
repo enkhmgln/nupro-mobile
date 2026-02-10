@@ -1,0 +1,1 @@
+enum PayType { qpay, bank }
