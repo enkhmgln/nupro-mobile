@@ -56,6 +56,11 @@ class SignUpInfoController extends IOController {
     label: 'Таны нэр',
     validators: [ValidatorType.notEmpty],
   );
+  final phone = IOTextfieldModel(
+    label: 'Утасны дугаар',
+    validators: [ValidatorType.phone],
+    keyboardType: TextInputType.phone,
+  );
   final email = IOTextfieldModel(
     label: 'И-мэйл',
     validators: [ValidatorType.email],
@@ -94,6 +99,9 @@ class SignUpInfoController extends IOController {
     super.onInit();
     getHospitalData();
     getSpecializationData();
+    if (model.email.isNotEmpty) {
+      email.controller.text = model.email;
+    }
   }
 
   void handleImageUploaded(XFile? image) {
@@ -154,6 +162,7 @@ class SignUpInfoController extends IOController {
   void setData() {
     model.lastName = surname.value;
     model.firstName = name.value;
+    model.phone = phone.value;
     model.email = email.value;
     model.gender = selectedIndex.value;
     model.dataBirth = dateBirthField.value.value;
@@ -183,6 +192,12 @@ class SignUpInfoController extends IOController {
 
     if (name.value.trim().isEmpty) {
       showError(text: 'Нэр оруулна уу');
+      nextButton.update((val) => val?.isLoading = false);
+      return;
+    }
+
+    if (phone.value.trim().isEmpty) {
+      showError(text: 'Утасны дугаар оруулна уу');
       nextButton.update((val) => val?.isLoading = false);
       return;
     }

@@ -34,25 +34,14 @@ class SignForgetFieldScreen extends GetView<SignForgetFieldController> {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    if (type == ForgetType.email)
-                      Text(
-                        'Имэйлээ оруулна уу, бид баталгаажуулах кодыг имэйл рүү илгээх болно',
-                        style: IOStyles.body1Medium.copyWith(
-                          color: IOColors.textSecondary,
-                        ),
+                    Text(
+                      'Имэйлээ оруулна уу, бид баталгаажуулах кодыг имэйл рүү илгээх болно',
+                      style: IOStyles.body1Medium.copyWith(
+                        color: IOColors.textSecondary,
                       ),
-                    if (type == ForgetType.phone)
-                      Text(
-                        'Утасны дугаараа оруулна уу, бид баталгаажуулах кодыг имэйл рүү илгээх болно',
-                        style: IOStyles.body1Medium.copyWith(
-                          color: IOColors.textSecondary,
-                        ),
-                      ),
+                    ),
                     const SizedBox(height: 26),
-                    if (type == ForgetType.email)
-                      IOTextfieldWidget(model: controller.emailField),
-                    if (type == ForgetType.phone)
-                      IOTextfieldWidget(model: controller.phoneField),
+                    IOTextfieldWidget(model: controller.emailField),
                   ],
                 ),
               ),

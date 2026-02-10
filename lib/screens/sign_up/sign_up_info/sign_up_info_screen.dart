@@ -52,6 +52,12 @@ class SignUpInfoScreen extends GetView<SignUpInfoController> {
                     const SizedBox(height: 8),
                     IOTextfieldWidget(model: controller.name),
                     const SizedBox(height: 16),
+                    Text('Утасны дугаар',
+                        style: IOStyles.caption1SemiBold
+                            .copyWith(color: IOColors.textPrimary)),
+                    const SizedBox(height: 8),
+                    IOTextfieldWidget(model: controller.phone),
+                    const SizedBox(height: 16),
                     Text('И-мэйл',
                         style: IOStyles.caption1SemiBold
                             .copyWith(color: IOColors.textPrimary)),

@@ -41,46 +41,8 @@ class SignForgetEmailPhoneScreen
                 ),
               ),
               const SizedBox(height: 26),
-              // IOGesture(
-              //   onTap: () => AuthRoute.toForgetField(ForgetType.email),
-              //   child: IOCardBorderWidget(
-              //     child: Padding(
-              //       padding: const EdgeInsets.all(16.0),
-              //       child: Row(
-              //         mainAxisAlignment: MainAxisAlignment.start,
-              //         children: [
-              //           SvgPicture.asset(
-              //             'assets/icons/mail.svg',
-              //             height: 20,
-              //             width: 20,
-              //           ),
-              //           const SizedBox(width: 26),
-              //           Column(
-              //             crossAxisAlignment: CrossAxisAlignment.start,
-              //             children: [
-              //               Text(
-              //                 'Имэйл',
-              //                 style: IOStyles.body1Bold.copyWith(
-              //                   color: IOColors.textPrimary,
-              //                 ),
-              //               ),
-              //               const SizedBox(height: 4),
-              //               Text(
-              //                 '********@mail.com',
-              //                 style: IOStyles.caption1Bold.copyWith(
-              //                   color: IOColors.textSecondary,
-              //                 ),
-              //               ),
-              //             ],
-              //           )
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              const SizedBox(height: 16),
               IOGesture(
-                onTap: () => AuthRoute.toForgetField(ForgetType.phone),
+                onTap: () => AuthRoute.toForgetField(ForgetType.email),
                 child: IOCardBorderWidget(
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
@@ -88,7 +50,7 @@ class SignForgetEmailPhoneScreen
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SvgPicture.asset(
-                          'assets/icons/phone.svg',
+                          'assets/icons/mail.svg',
                           height: 20,
                           width: 20,
                         ),
@@ -97,14 +59,14 @@ class SignForgetEmailPhoneScreen
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Утасны дугаар',
+                              'Имэйл',
                               style: IOStyles.body1Bold.copyWith(
                                 color: IOColors.textPrimary,
                               ),
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              '**** **** **** 2345',
+                              'Баталгаажуулах кодыг имэйл рүү илгээх',
                               style: IOStyles.caption1Bold.copyWith(
                                 color: IOColors.textSecondary,
                               ),

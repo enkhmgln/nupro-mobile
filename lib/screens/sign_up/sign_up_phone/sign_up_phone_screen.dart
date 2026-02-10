@@ -1,5 +1,6 @@
 import 'package:nuPro/library/components/components.dart';
 import 'package:nuPro/library/components/main/io_scaffold.dart';
+import 'package:nuPro/library/theme/io_colors.dart';
 import 'package:nuPro/library/theme/io_styles.dart';
 import 'package:nuPro/screens/sign_up/sign_up_phone/sign_up_phone_controller.dart';
 import 'package:flutter/material.dart';
@@ -26,12 +27,19 @@ class SignUpPhoneScreen extends GetView<SignUpPhoneController> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const Text(
-                        'Та утасны дугаараа оруулна уу.',
+                        'Та имэйл хаягаа оруулна уу.',
                         style: IOStyles.h6,
                       ),
-                      const SizedBox(height: 32),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Баталгаажуулах кодыг имэйл рүү илгээх болно',
+                        style: IOStyles.body2Regular.copyWith(
+                          color: IOColors.textSecondary,
+                        ),
+                      ),
+                      const SizedBox(height: 24),
                       IOTextfieldWidget(
-                        model: controller.phoneField,
+                        model: controller.emailField,
                       ),
                     ],
                   ),

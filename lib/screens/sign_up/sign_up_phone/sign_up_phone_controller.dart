@@ -8,10 +8,10 @@ import 'package:get/get.dart';
 class SignUpPhoneController extends IOController {
   final model = SignUpModel();
 
-  final phoneField = IOTextfieldModel(
-    label: 'Утасны дугаар',
-    validators: [ValidatorType.phone],
-    keyboardType: TextInputType.phone,
+  final emailField = IOTextfieldModel(
+    label: 'И-мэйл',
+    validators: [ValidatorType.email],
+    keyboardType: TextInputType.emailAddress,
   );
   final nextButton = IOButtonModel(
     label: 'Үргэжлүүлэх',
@@ -23,9 +23,9 @@ class SignUpPhoneController extends IOController {
   @override
   void onInit() {
     super.onInit();
-    phoneField.status.addListener(() {
+    emailField.status.addListener(() {
       nextButton.update((val) {
-        val?.isEnabled = phoneField.isValid;
+        val?.isEnabled = emailField.isValid;
       });
     });
   }
@@ -38,7 +38,7 @@ class SignUpPhoneController extends IOController {
     });
 
     final response = await UserApi().sendOtp(
-      phone: phoneField.value,
+      email: emailField.value,
       type: 'register',
     );
     isLoading.value = false;
@@ -46,7 +46,7 @@ class SignUpPhoneController extends IOController {
       val?.isLoading = false;
     });
     if (response.isSuccess) {
-      model.phone = phoneField.value;
+      model.email = emailField.value;
       AuthRoute.toSignUpOtp(model);
     } else {
       showError(text: response.message);

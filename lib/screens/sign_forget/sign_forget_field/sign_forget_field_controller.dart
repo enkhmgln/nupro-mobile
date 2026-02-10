@@ -31,29 +31,26 @@ class SignForgetFieldController extends IOController {
   @override
   void onInit() {
     super.onInit();
-
-    phoneField.status.addListener(_updateNextButton);
     emailField.status.addListener(_updateNextButton);
   }
 
   void _updateNextButton() {
     nextButton.update((val) {
-      val?.isEnabled = phoneField.isValid || emailField.isValid;
+      val?.isEnabled = emailField.isValid;
     });
   }
 
   Future onTapOtpCheck() async {
     Get.focusScope?.unfocus();
     startLoading();
+    final email = emailField.value.trim();
     final response = await UserApi().sendOtp(
-      phone: phoneField.value,
-      email: emailField.value,
+      email: email,
       type: 'reset_password',
     );
     stopLoading();
     if (response.isSuccess) {
-      model.phone = phoneField.value;
-      model.email = emailField.value;
+      model.email = email;
       AuthRoute.toForgetOtp(model: model);
     } else {
       showError(text: response.message);

@@ -19,33 +19,25 @@ class UserApi extends IOClient {
   }
 
   Future<IOResponse> sendOtp({
-    String? phone,
-    String? email,
+    required String email,
     required String type,
   }) async {
     const url = '/api/users/otp/send';
-
-    final Map<String, dynamic> data = {
+    final data = {
+      'email': email,
       'otp_type': type,
     };
-    if (phone != null && phone.isNotEmpty) {
-      data['phone_number'] = phone;
-    }
-    if (email != null && email.isNotEmpty) {
-      data['email'] = email;
-    }
-
     return sendPostRequest(url, data: data, hasToken: false);
   }
 
   Future<IOResponse> checkOtp({
-    required String phoneNumber,
+    required String email,
     required String otp,
     required String type,
   }) async {
     const url = '/api/users/otp/verify';
     final data = {
-      'phone_number': phoneNumber,
+      'email': email,
       'code': otp,
       'otp_type': type,
     };
@@ -120,14 +112,14 @@ class UserApi extends IOClient {
 
   Future<IOResponse> forgetPassChange({
     required String token,
-    required String phone,
+    required String email,
     required String newPass,
   }) async {
     const path = '/api/users/reset-password';
     final data = {
       'token': token,
-      'phone_number': phone,
-      'new_password': newPass
+      'email': email,
+      'new_password': newPass,
     };
     return sendPostRequest(
       path,

@@ -36,7 +36,7 @@ class SignUpOtpScreen extends GetView<SignUpOtpController> {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          '(+976) ${controller.model.phone} дугаарт бидний илгээсэн кодыг оруулна уу',
+                          '${controller.model.email} хаяг руу илгээсэн кодыг оруулна уу',
                           style: IOStyles.body1Medium.copyWith(
                             color: IOColors.textSecondary,
                           ),

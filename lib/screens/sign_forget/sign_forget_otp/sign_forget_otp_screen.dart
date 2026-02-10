@@ -36,13 +36,13 @@ class SignForgetOtpScreen extends GetView<SignForgetOtpController> {
                           color: IOColors.textPrimary,
                         ),
                       ),
-                      // const SizedBox(height: 8),
-                      // Text(
-                      //   '(+976) ${controller.model.phone} дугаарт бидний илгээсэн кодыг оруулна уу',
-                      //   style: IOStyles.body1Medium.copyWith(
-                      //     color: IOColors.textSecondary,
-                      //   ),
-                      // ),
+                      const SizedBox(height: 8),
+                      Text(
+                        '${controller.model.email} хаяг руу илгээсэн кодыг оруулна уу',
+                        style: IOStyles.body1Medium.copyWith(
+                          color: IOColors.textSecondary,
+                        ),
+                      ),
                       const SizedBox(height: 32),
                       IOOtpWidget(model: controller.otp),
                       const SizedBox(height: 16),

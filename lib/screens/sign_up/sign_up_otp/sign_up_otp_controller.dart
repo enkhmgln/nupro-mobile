@@ -39,7 +39,7 @@ class SignUpOtpController extends IOController {
     });
 
     final response = await UserApi().checkOtp(
-      phoneNumber: model.phone,
+      email: model.email,
       otp: otp.value,
       type: 'register',
     );

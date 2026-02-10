@@ -2,7 +2,6 @@ import 'package:nuPro/library/components/main/io_toast.dart';
 import 'package:nuPro/library/library.dart';
 import 'package:nuPro/library/routes/auth_route.dart';
 import 'package:nuPro/library/theme/io_colors.dart';
-import 'package:nuPro/library/utils/constants.dart';
 import 'package:nuPro/library/utils/validator.dart';
 import 'package:nuPro/screens/sign_forget/sign_forget_email_phone/models/sign_reset_model.dart';
 import 'package:flutter/material.dart';
@@ -73,16 +72,13 @@ class SignForgetPassController extends IOController {
     });
     final response = await UserApi().forgetPassChange(
       newPass: password.value,
-      phone: model.phone,
+      email: model.email,
       token: model.otpToken,
     );
     next.update((val) {
       val?.isLoading = false;
     });
     if (response.isSuccess) {
-      final token = TokenModel.fromJson(response.data);
-      await UserStoreManager.shared.write(kToken, token.toMap());
-      // ClientManager.getUserInfo();
       AuthRoute.toSignInScreen();
       // IOPages.toHome();
       IOToast(
