@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1012043894026:android:1a7ccb38039c81b3f0fef3",
+        "mobilesdk_app_id": "1:1012043894026:android:24ef4c27d1f5f5fbf0fef3",
         "android_client_info": {
-          "package_name": "com.example.sus_pro"
+          "package_name": "mn.nexusinfinity.nupro"
         }
       },
       "oauth_client": [],

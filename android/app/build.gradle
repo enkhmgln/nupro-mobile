@@ -23,8 +23,14 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+def keystorePropertiesFile = rootProject.file('key.properties')
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
 android {
-    namespace = "com.example.sus_pro"
+    namespace = "mn.nexusinfinity.nupro"
     compileSdkVersion 36
     ndkVersion "29.0.13113456"
     compileOptions {
@@ -47,7 +53,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.sus_pro"
+        applicationId "mn.nexusinfinity.nupro"
         minSdkVersion 24
         targetSdkVersion 36
         multiDexEnabled true
@@ -55,12 +61,23 @@ android {
         versionName flutterVersionName
     }
 
+    if (keystorePropertiesFile.exists()) {
+        signingConfigs {
+            release {
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = keystorePropertiesFile.exists() ? signingConfigs.release : signingConfigs.getByName("debug")
         }
     }
 }

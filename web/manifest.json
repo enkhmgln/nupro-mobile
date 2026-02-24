@@ -1,6 +1,6 @@
 {
-    "name": "sus_pro",
-    "short_name": "sus_pro",
+    "name": "NuPro",
+    "short_name": "NuPro",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

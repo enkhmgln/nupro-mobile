@@ -41,18 +41,18 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBos-ar1MeP9qRIi3Gn2PlxXwlHReQ3f18',
-    appId: '1:1012043894026:web:6894d29df3721d93f0fef3',
+    apiKey: 'AIzaSyAiF3px5O17I8zKHLKNiAeCX8cZaClAqrg',
+    appId: '1:1012043894026:web:689ba06ffd2bd1aaf0fef3',
     messagingSenderId: '1012043894026',
     projectId: 'nupro-63fb3',
     authDomain: 'nupro-63fb3.firebaseapp.com',
     storageBucket: 'nupro-63fb3.firebasestorage.app',
-    measurementId: 'G-J7YDENCTQ4',
+    measurementId: 'G-N2LMMCE6M0',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCGj0NbZsH7BGcnaZlbp9zNEd0_o-fSB10',
-    appId: '1:1012043894026:android:1a7ccb38039c81b3f0fef3',
+    appId: '1:1012043894026:android:24ef4c27d1f5f5fbf0fef3',
     messagingSenderId: '1012043894026',
     projectId: 'nupro-63fb3',
     storageBucket: 'nupro-63fb3.firebasestorage.app',
@@ -60,30 +60,30 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyD3BHvcQhrqTDQgzh5KXCqy5qh42r9e7dU',
-    appId: '1:1012043894026:ios:4076678550acfa1bf0fef3',
+    appId: '1:1012043894026:ios:e69e48fa1ab7e142f0fef3',
     messagingSenderId: '1012043894026',
     projectId: 'nupro-63fb3',
     storageBucket: 'nupro-63fb3.firebasestorage.app',
-    iosBundleId: 'com.example.susPro',
+    iosBundleId: 'mn.nexusinfinity.nupro',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyD3BHvcQhrqTDQgzh5KXCqy5qh42r9e7dU',
-    appId: '1:1012043894026:ios:4076678550acfa1bf0fef3',
+    appId: '1:1012043894026:ios:e69e48fa1ab7e142f0fef3',
     messagingSenderId: '1012043894026',
     projectId: 'nupro-63fb3',
     storageBucket: 'nupro-63fb3.firebasestorage.app',
-    iosBundleId: 'com.example.susPro',
+    iosBundleId: 'mn.nexusinfinity.nupro',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBos-ar1MeP9qRIi3Gn2PlxXwlHReQ3f18',
-    appId: '1:1012043894026:web:06f8ec7e42914882f0fef3',
+    apiKey: 'AIzaSyAiF3px5O17I8zKHLKNiAeCX8cZaClAqrg',
+    appId: '1:1012043894026:web:27afa7b0999ccfc3f0fef3',
     messagingSenderId: '1012043894026',
     projectId: 'nupro-63fb3',
     authDomain: 'nupro-63fb3.firebaseapp.com',
     storageBucket: 'nupro-63fb3.firebasestorage.app',
-    measurementId: 'G-J8323E0RZM',
+    measurementId: 'G-2BET3MTTD1',
   );
 
 }

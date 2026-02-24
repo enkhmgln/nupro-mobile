@@ -4,11 +4,9 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:g_json/g_json.dart';
-import 'package:get/get.dart';
 import 'package:nuPro/library/library.dart';
 import 'package:nuPro/library/routes/dynamic_route.dart';
 import 'package:nuPro/library/routes/home_route.dart';
-import 'package:nuPro/main_controller.dart';
 import 'package:nuPro/library/components/widgets/incoming_call_modal.dart';
 
 class MainConfig {

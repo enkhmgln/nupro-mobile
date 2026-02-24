@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.sus_pro">
+    package="mn.nexusinfinity.nupro">
 
     <!-- Permissions -->
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -22,7 +22,7 @@
 
     <application
         android:name="${applicationName}"
-        android:label="NuPros"
+        android:label="NuPro"
         android:icon="@mipmap/ic_launcher">
 
         <!-- Flutter CallKit Incoming Service -->

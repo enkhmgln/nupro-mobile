@@ -1,4 +1,4 @@
-package com.example.sus_pro
+package mn.nexusinfinity.nupro
 
 import android.app.Activity
 import android.content.IntentSender
