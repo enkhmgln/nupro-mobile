@@ -11,4 +11,4 @@ PRODUCT_NAME = NuPro
 PRODUCT_BUNDLE_IDENTIFIER = mn.nexusinfinity.nupro
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2025 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2025 mn.nexusinfinity.nupro. All rights reserved.
